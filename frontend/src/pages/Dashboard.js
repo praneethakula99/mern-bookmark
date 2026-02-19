@@ -10,7 +10,6 @@ const Dashboard = () => {
     url: "",
     category: "",
   });
-  const [editingBookmark, setEditingBookmark] = useState(null);
   const [token, setToken] = useState(null);
   const navigate = useNavigate();
 
