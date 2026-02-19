@@ -22,7 +22,7 @@ const Login = () => {
     const { error } = await supabase.auth.signInWithOAuth({
       provider: "google",
       options: {
-        redirectTo: "https://mern-bookmark.vercel.app/dashboard",
+        redirectTo: "http://localhost:3000/dashboard",
       },
     });
 

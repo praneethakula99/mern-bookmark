@@ -34,7 +34,7 @@ const Dashboard = () => {
   const fetchBookmarks = async (authToken) => {
     try {
       const res = await axios.get(
-        "https://mern-bookmark.vercel.app/api/bookmarks",
+        "http://localhost:5000/api/bookmarks",
         {
           headers: {
             Authorization: `Bearer ${authToken}`,
@@ -59,7 +59,7 @@ const Dashboard = () => {
 
     try {
       await axios.post(
-        "https://mern-bookmark.vercel.app/api/bookmarks/add",
+        "http://localhost:5000/api/bookmarks/add",
         formData,
         {
           headers: {
@@ -79,7 +79,7 @@ const Dashboard = () => {
   const handleDelete = async (id) => {
     try {
       await axios.delete(
-        `https://mern-bookmark.vercel.app/api/bookmarks/delete/${id}`,
+        `http://localhost:5000/api/bookmarks/delete/${id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -97,7 +97,7 @@ const Dashboard = () => {
   const toggleFavourite = async (id) => {
     try {
       await axios.put(
-        `https://mern-bookmark.vercel.app/api/bookmarks/favourite/${id}`,
+        `http://localhost:5000/api/bookmarks/favourite/${id}`,
         {},
         {
           headers: {
